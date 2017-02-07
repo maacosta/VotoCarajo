@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="es" ng-app="vcApp">
+<head>
+    <title>VotoCarajo</title>
+    <script src="~/Scripts/angular.min.js"></script>
+
+    <script src="~/Lib/Votacion.js"></script>
+</head>
+<body ng-controller="votacionCtr">
+    <div>
+        Usuario logeado: {{Usuario}}
+        <input type="hidden" id="hdnUsuario" value="@ViewBag.Usuario" />
+    </div>
+    <div class="container">
+        <p>Mensaje</p>
+        <p><input type="text" ng-model="Mensaje" /></p>
+        <div>
+            <input type="button" ng-click="enviarSugerencia()" value="Sugerir" />
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted text-center">VotoCarajo | Baufest SA</p>
+        </div>
+    </footer>
+</body>
+</html>
